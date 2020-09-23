@@ -1,0 +1,47 @@
+.friends-panel {
+  height: 85vh;
+  margin-top: 2rem;
+}
+.messages-panel {
+  height: 78vh;
+  margin-top: 2rem;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  padding-bottom: 20px;
+}
+
+.write-message {
+  position: fixed;
+  top: 1;
+}
+
+.write-panel {
+  position: relative;
+  bottom: 3px;
+  border: solid rgba(0, 0, 0, 0.1) 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.write-panel_grid {
+  display: flex;
+  margin: 0 3rem;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.submit-btn {
+  position: "relative";
+  left: 25%;
+}
+
+@media only screen and (max-width: 950px) {
+  .submit-btn {
+    position: relative;
+    left: 0%;
+  }
+}

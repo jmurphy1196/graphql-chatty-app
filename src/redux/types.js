@@ -1,0 +1,26 @@
+//ui types
+export const SET_ERRORS = "SET_ERRORS";
+export const LOADING_UI = "LOADING_UI";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const LOADING_DATA = "LOADING_DATA";
+export const STOP_LOADING_UI = "STOP_LOADING_UI";
+
+//user types
+export const SET_USER = "SET_USER";
+export const LOADING_USER = "LOADING_USER";
+export const SET_AUTHENTICATED = "SET_AUTHENTICATED";
+export const SET_UNAUTHENTICATED = "SET_UNAUTHENTICATED";
+export const SIGNUP_USER = "SIGNUP_USER";
+export const UPLOAD_IMAGE = "UPLOAD_IMAGE";
+
+//data types
+export const GET_MESSAGES = "GET_MESSAGES";
+export const SUBSCRIBE_MESSAGES = "SUBSCRIBE_MESSAGES";
+export const GET_ALL_USERS = "GET_ALL_USERS";
+export const LOADING_ALL_USERS = "LOADING_ALL_USERS";
+export const STOP_LOADING_USERS = "STOP_LOADING_USERS";
+export const SET_RECIPIENT = "SET_RECIPIENT";
+export const SET_ALL_USERS = "SET_ALL_USERS";
+export const SET_MESSAGES_TO_DISPLAY = "SET_MESSAGES_TO_DISPLAY";
+export const WRITE_MESSAGE = "WRITE_MESSAGE";
+export const MESSAGE_RECIEVED = "MESSAGE_RECIEVED";

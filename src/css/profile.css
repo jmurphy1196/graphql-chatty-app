@@ -1,0 +1,18 @@
+.profile-panel {
+  position: relative;
+  margin-top: 2rem;
+  height: 75vh;
+  padding-top: 2rem;
+}
+
+#profileImage {
+  max-width: 20rem;
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.image-container {
+  position: relative;
+  margin-top: 3rem;
+}

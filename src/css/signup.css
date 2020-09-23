@@ -1,0 +1,39 @@
+.login-panel {
+  height: 75vh;
+  margin-top: 2rem;
+
+  flex-direction: column;
+}
+
+#login-logo {
+  max-width: 10rem;
+  max-height: 10rem;
+  margin-top: 50px;
+}
+.login-logo_grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22.5rem;
+  margin-top: 1rem;
+  width: 50%;
+}
+
+.form-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .login-form {
+    width: 100%;
+  }
+}
