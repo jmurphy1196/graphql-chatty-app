@@ -53,11 +53,6 @@ function Navbar({ authenticated, logoutUser }) {
                 </Button>
               </Link>
             </Tooltip>
-            <Tooltip title="Settings">
-              <Button color="inherit">
-                <Settings />
-              </Button>
-            </Tooltip>
           </Grid>
           {authenticated === false ? (
             <Link to="/login" className={classes.btn}>

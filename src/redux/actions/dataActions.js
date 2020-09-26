@@ -31,7 +31,6 @@ export const getAllUsers = (usersEmail) => (dispatch) => {
       },
     })
     .then((resData) => {
-      console.log(resData);
       const users = resData.data.data.getAllUsers.filter(
         (user) => user.email !== usersEmail
       );
@@ -68,10 +67,9 @@ export const getMessages = () => (dispatch) => {
 };
 
 export const setMessgesToDisplay = (messages, email) => (dispatch) => {
-  console.log("this is the user to filter");
   console.log(email);
   messages = messages.filter((m) => m.from === email || m.to === email);
-  console.log("afte filter");
+
   console.log(messages);
   dispatch({ type: SET_MESSAGES_TO_DISPLAY, payload: messages });
 };

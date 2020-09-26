@@ -74,7 +74,11 @@ const Login = ({ loginUser, history, loadingUI, errors }) => {
                 </form>
               </Grid>
               <Grid item xs={12}>
-                <Typography variant="subtitle1" align="center">
+                <Typography
+                  style={{ marginBottom: "2rem" }}
+                  variant="subtitle2"
+                  align="center"
+                >
                   dont have an account? sign up <Link to="/signup">here</Link>
                 </Typography>
               </Grid>

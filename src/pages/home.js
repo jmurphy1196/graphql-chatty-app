@@ -40,6 +40,12 @@ class home extends Component {
       this.props.getAllUsers(email);
       this.props.getMessages();
     }
+    if (prevProp.displayMessages) {
+      if (prevProp.displayMessages.length < this.props.displayMessages.length) {
+        const messagePanel = document.querySelector(".messages-panel");
+        messagePanel.scrollTo(0, messagePanel.scrollHeight);
+      }
+    }
   }
 
   handleElevation = (panel) => {
@@ -132,10 +138,11 @@ class home extends Component {
                 Messages
               </Typography>
               {displayMessages
-                ? displayMessages.map((message) => {
+                ? displayMessages.map((message, ind) => {
                     if (message.from === userInfo.email) {
                       return (
                         <Message
+                          key={ind}
                           message={message.content}
                           createdAt={message.createdAt}
                         />
@@ -143,6 +150,7 @@ class home extends Component {
                     } else {
                       return (
                         <Message
+                          key={ind}
                           createdAt={message.createdAt}
                           sender
                           message={message.content}
@@ -187,7 +195,6 @@ const NewMessageRecieved = (props) => {
   if (loading) {
   }
   if (data) {
-    console.log("got some data!");
     const indexOfMessage = allMessages.findIndex(
       (m) => m.createdAt === data.messageAdded.createdAt
     );
@@ -197,9 +204,10 @@ const NewMessageRecieved = (props) => {
   }
   if (error) {
     console.log(error);
+    window.location.reload();
   }
 
-  return <></>;
+  return null;
 };
 
 const mapStateToProps = (state) => ({
